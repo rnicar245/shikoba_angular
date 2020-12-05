@@ -11,21 +11,21 @@ export class AuthService {
 
   login(){
     this.fire.signInWithPopup(new firebase.default.auth.GoogleAuthProvider()).then(res => {
-      console.log("Oh sí señor cangrejo");
-      this.fire.user.subscribe(flamingo => {
-        console.log(flamingo.email)
+      console.log("Logeado");
+      this.fire.user.subscribe(lg => {
+        console.log(lg.email)
       })
       
       }, err => {
-        console.log("Cagaste mi rey");
+        console.log("Error al logearse");
       })
   }
 
   logout(){
     this.fire.signOut().then(res => {
-      console.log("Adiós chulo");
+      console.log("Deslogeado");
       }, err => {
-        console.log("There is no scape");
+        console.log("Error al deslogearse");
       })
   }
 }
