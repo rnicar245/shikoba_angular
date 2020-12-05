@@ -19,11 +19,11 @@ export class ApiService {
         fuera.array = JSON.parse(xhr.response);
         console.log(fuera.array);
       }else{
-        console.log("maricon?")
+        console.log("Error")
       }
     }
     xhr.onerror = function(){
-      console.log("cagaste");
+      console.log("Error2");
     }
     xhr.send();
   }
